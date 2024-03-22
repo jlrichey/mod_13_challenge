@@ -2,24 +2,13 @@
 
 <img src="images/AI_banner.png" alt="drawing" width="600"/>
 
-
-
-| Type  | Units | Activation |
-|-------|-------|------------|
-| Dense | 60    | relu       |
-| Dense | 30    | relu       |
-| Dense | 1     | sigmoid    |
-
-
-
-
 ## Overview
 
 For this challenge I assume the role of a risk management associate at Alphabet Soup, a venture capital firm. A Neural Network Model is built that predicts whether venture capital funding applicants will be successful if funded by the firm.
 
 ## Dataset
 
-Alphabet Soup has provided a dataset in `csv` format with over 34,000 records of previous organizations who recieved funding, including whether or not the funding recipient was ultimately successful. 
+Alphabet Soup has provided a dataset in `csv` format with over 34,000 records of previous organizations who received funding, including whether or not the funding recipient was ultimately successful. 
 
 The dataset includes the following input features (X):
 * EIN
@@ -67,7 +56,7 @@ The features (X) and target (y) were split into training and testing datasets us
 
 ## Binary Classification Models using a Neural Network
 
-Three distinct deep learning models using a neural network were compiled for analysis and evaluation using Tensorflow's Keras. The following are the details and results of each binary classification model. 
+Three distinct deep learning models using a neural network were compiled for analysis and evaluation using TensorFlow Keras. The following are the details and results of each binary classification model. 
 
 ### Original Model
 
@@ -101,7 +90,7 @@ Sequential model parameters:
 ### Alternative Model 2 (optimization attempt)
 
 | Layer(type)  | Output Shape | Param # | Activation |
-|-------|:-------:|:------------:|:------------:|
+|-------|:-------:|:------------:|:------------|
 | Dense 7| 29    | 3,393       | n/ap       |
 | LeakyReLU | 29    | 0       | leaky_re_lu       |
 | Dense 8 | 7     | 210       | n/ap       |
@@ -126,12 +115,16 @@ Sequential model parameters:
 
 ## Summary
 
+All three models had an approximate accuracy of 0.73 and an approximate loss of 0.55 when rounded to the nearest hundredth. The original model was the least complex with two hidden layers and one output layer. Its simplicity is seen in the step detail performance of 0 to 788us (microseconds). I would recommend the original model for these reasons. 
 
-If I were to employ further models I would experiment with fewer hidden layers, fewer nodes, dropouts, etc. 
+If I were to investigate further models for optimization, I would experiment with fewer hidden layers, fewer nodes, and more and less epochs, among other approaches. 
 
 ## Sources
 
 The following sources were consulted in the completion of this project. 
 
 * [pandas.Pydata.org API Reference](https://pandas.pydata.org/docs/reference/index.html)
+* [Tensorflow Keras documentation](https://www.tensorflow.org/guide/keras)
+* [scikit-learn documentation](https://scikit-learn.org/stable/)
 * UCB FinTech Bootcamp instructor-led coding exercises
+* ChatGPT for LeakyReLU integration syntax
