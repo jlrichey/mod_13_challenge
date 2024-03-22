@@ -109,13 +109,13 @@ Sequential model parameters:
 
 | Model  | Accuracy | Loss | Step Details |
 |-------|:-------:|:------------:|:------------|
-| Original Model| 0.7293    | 0.5549       | 0 - 788us/step       |
-| Alternative Model 1 | 0.7317    | 0.5551       | 0 - 1ms/step       |
-| Alternative Model 2 | 0.7304     | 0.5524       | 0 - 1ms/step       |
+| Original Model| 0.7307    | 0.5545       | 0 - 658us/step       |
+| Alternative Model 1 | 0.7303    | 0.5573       | 0 - 1ms/step       |
+| Alternative Model 2 | 0.7304     | 0.5523       | 0 - 1ms/step       |
 
 ## Summary
 
-All three models had an approximate accuracy of 0.73 and an approximate loss of 0.55 when rounded to the nearest hundredth. The original model was the least complex with two hidden layers and one output layer. Its simplicity is seen in the step detail performance of 0 to 788us (microseconds). I would recommend the original model for these reasons. 
+All three models had an approximate accuracy of 0.73 and an approximate loss of 0.55 (A2 was 0.56) when rounded to the nearest hundredth. The original model was the least complex with two hidden layers and one output layer. Its simplicity is seen in the step detail performance of 0 to 658us (microseconds). I would recommend the original model for these reasons. 
 
 If I were to investigate further models for optimization, I would experiment with fewer hidden layers, fewer nodes, and more and less epochs, among other approaches. 
 
